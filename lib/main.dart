@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
               controller: output256Controller,
               obscureText: passwordInvisible,
+              readOnly: true,
               decoration: const InputDecoration(
                 hintText: "SHA256 Output",
                 border: OutlineInputBorder(),
@@ -166,6 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
               controller: outputSubstringController,
               obscureText: passwordInvisible,
+              readOnly: true,
               decoration: const InputDecoration(
                 hintText: "Substring output",
                 border: OutlineInputBorder(),
