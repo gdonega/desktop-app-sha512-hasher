@@ -26,7 +26,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
 
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
-  Win32Window::Size size(400, 640);
+  Win32Window::Size size(400, 700);
   if (!window.Create(L"hasher_sha256", origin, size)) {
     return EXIT_FAILURE;
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final inputController = TextEditingController();
   final output256Controller = TextEditingController();
   final outputSubstringController = TextEditingController();
+  bool passwordInvisible = true;
 
   void calcSubstring(indexEnd) {
     if (output256Controller.text.isEmpty) {
@@ -62,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextField(
               controller: inputController,
+              obscureText: passwordInvisible,
               decoration: const InputDecoration(
                 hintText: "Input to be hashed",
                 border: OutlineInputBorder(),
@@ -81,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextField(
               controller: output256Controller,
+              obscureText: passwordInvisible,
               decoration: const InputDecoration(
                 hintText: "SHA256 Output",
                 border: OutlineInputBorder(),
@@ -97,74 +101,90 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 calcSubstring(120);
               },
-              child: const Text("Substring first 120 characters"),
+              child: const Text("Substring and Copy first 120 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(110);
               },
-              child: const Text("Substring first 110 characters"),
+              child: const Text("Substring and Copy first 110 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(100);
               },
-              child: const Text("Substring first 100 characters"),
+              child: const Text("Substring and Copy first 100 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(80);
               },
-              child: const Text("Substring first 80 characters"),
+              child: const Text("Substring and Copy first 80 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(60);
               },
-              child: const Text("Substring first 60 characters"),
+              child: const Text("Substring and Copy first 60 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(40);
               },
-              child: const Text("Substring first 40 characters"),
+              child: const Text("Substring and Copy first 40 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(20);
               },
-              child: const Text("Substring first 20 characters"),
+              child: const Text("Substring and Copy first 20 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(10);
               },
-              child: const Text("Substring first 10 characters"),
+              child: const Text("Substring and Copy first 10 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(8);
               },
-              child: const Text("Substring first 8 characters"),
+              child: const Text("Substring and Copy first 8 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(6);
               },
-              child: const Text("Substring first 6 characters"),
+              child: const Text("Substring and Copy first 6 characters"),
             ),
             ElevatedButton(
               onPressed: () {
                 calcSubstring(4);
               },
-              child: const Text("Substring first 4 characters"),
+              child: const Text("Substring and Copy first 4 characters"),
             ),
             TextField(
               controller: outputSubstringController,
+              obscureText: passwordInvisible,
               decoration: const InputDecoration(
                 hintText: "Substring output",
                 border: OutlineInputBorder(),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(' Hide text '),
+                Switch(
+                  value: passwordInvisible,
+                  activeColor: Colors.red,
+                  onChanged: (bool value) {
+                    setState(() {
+                      passwordInvisible = !passwordInvisible;
+                    });
+                  },
+                ),
+              ],
             ),
           ],
         ),
