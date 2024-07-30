@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=HasherSha512
+Exec=hasher_sha256 %u
+Icon=linux_icon.png
+Categories=Utility;

@@ -10,6 +10,7 @@
 .svn/
 migrate_working_dir/
 
+HasherSha512.AppDir/
 appimagetool-x86_64.AppImage
 HasherSha512.exe
 
