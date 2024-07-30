@@ -1,4 +1,4 @@
-package com.example.hasher_sha256
+package com.example.hasher_sha512
 
 import io.flutter.embedding.android.FlutterActivity
 

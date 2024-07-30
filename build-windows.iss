@@ -3,7 +3,7 @@
 
 #define MyAppName "HasherSha512"
 #define MyAppVersion "1.1"
-#define MyAppExeName "hasher_sha256.exe"
+#define MyAppExeName "hasher_sha512.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.

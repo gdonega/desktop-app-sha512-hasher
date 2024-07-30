@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.dark(),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Hasher SHA256'),
+      home: const MyHomePage(title: 'Hasher SHA512'),
     );
   }
 }
@@ -35,17 +35,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final inputController = TextEditingController();
-  final output256Controller = TextEditingController();
+  final output512Controller = TextEditingController();
   final outputSubstringController = TextEditingController();
   bool passwordInvisible = true;
 
   void calcSubstring(indexEnd) {
-    if (output256Controller.text.isEmpty) {
+    if (output512Controller.text.isEmpty) {
       return;
     }
 
     outputSubstringController.text =
-        output256Controller.text.substring(0, indexEnd);
+        output512Controller.text.substring(0, indexEnd);
 
     Clipboard.setData(ClipboardData(text: outputSubstringController.text));
   }
@@ -72,28 +72,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 outputSubstringController.text = "";
 
                 if (inputController.text.isEmpty) {
-                  output256Controller.text = "";
+                  output512Controller.text = "";
                   return;
                 }
 
-                output256Controller.text = sha512
+                output512Controller.text = sha512
                     .convert(utf8.encode(inputController.text))
                     .toString();
               },
             ),
             TextField(
-              controller: output256Controller,
+              controller: output512Controller,
               obscureText: passwordInvisible,
               readOnly: true,
               decoration: const InputDecoration(
-                hintText: "SHA256 Output",
+                hintText: "SHA512 Output",
                 border: OutlineInputBorder(),
               ),
             ),
             ElevatedButton(
               onPressed: () {
                 Clipboard.setData(
-                    ClipboardData(text: output256Controller.text));
+                    ClipboardData(text: output512Controller.text));
               },
               child: const Text("Copy All characters"),
             ),
