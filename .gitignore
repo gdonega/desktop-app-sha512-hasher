@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+appimagetool-x86_64.AppImage
+HasherSha512.exe
+
 # IntelliJ related
 *.iml
 *.ipr
