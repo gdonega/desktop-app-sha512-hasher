@@ -1,6 +1,6 @@
 {
-    "name": "hasher_sha512",
-    "short_name": "hasher_sha512",
+    "name": "hashersha512",
+    "short_name": "hashersha512",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
