@@ -4,5 +4,5 @@ Type=Application
 Terminal=false
 Name=HasherSha512
 Exec=hasher_sha256 %u
-Icon=linux_icon.png
+Icon=linux_icon
 Categories=Utility;

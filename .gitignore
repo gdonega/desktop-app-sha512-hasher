@@ -11,6 +11,7 @@
 migrate_working_dir/
 
 HasherSha512.AppDir/
+HasherSha512-x86_64.AppImage
 appimagetool-x86_64.AppImage
 HasherSha512.exe
 
