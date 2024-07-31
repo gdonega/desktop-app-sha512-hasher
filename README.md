@@ -1,7 +1,6 @@
 # Windows Build
 1. Go to project folder
-1. flutter build windows --release
-1. Execute build-windows.iss with inno setup
+1. `flutter build windows --release`
 
 
 # Linux Build

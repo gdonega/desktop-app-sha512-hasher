@@ -163,6 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text("Substring and Copy first 4 characters"),
             ),
+
             TextField(
               controller: outputSubstringController,
               obscureText: passwordInvisible,
